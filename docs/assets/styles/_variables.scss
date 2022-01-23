@@ -1,0 +1,32 @@
+// Lighter colors:
+$white: #ffffff;
+$light-grey: #e6e6e6;
+$light-grey2: #bbbbbb;
+$light-green: #25d366;
+$light-blue: #1c69d4;
+
+$grey-intermediate: #666666;
+$grey: #575757;
+
+// Darker colors:
+$blue-darker: #0351be;
+$green-darker: #35aa61;
+$grey-darker: #262626;
+$black: #000000;
+
+@mixin buttonDimensions {
+  width: 16rem;
+  height: 4.5rem;
+}
+
+@font-face {
+  font-family: "BMWTypeNext Pro, Light";
+  src: url(../images/fonts/BMWTypeNext-Light.20210426144302.ttf)
+    format("truetype");
+}
+
+@font-face {
+  font-family: "BMWTypeNext Pro, Bold";
+  src: url(../images/fonts/BMWTypeNext-Bold.20210426144302.ttf)
+    format("truetype");
+}

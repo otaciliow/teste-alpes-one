@@ -1,0 +1,433 @@
+.virtual-tour,
+.second-line-wrapper,
+.cotation-button.desktop,
+.cotation-form-desktop,
+.models-display-desktop,
+.company-description > img {
+  display: none;
+}
+
+// header
+header.navbar {
+  padding: 1.3rem 1.6rem 1.25rem;
+  background: $white;
+
+  .phone-content {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+
+    img {
+      width: 1.9rem;
+      opacity: 0.6;
+    }
+
+    span {
+      font-size: 1.4rem;
+      font-family: "BMWTypeNext Pro, Bold", sans-serif;
+      color: $grey-intermediate;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .header-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .bmw-logo {
+        img {
+          width: 3.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Cotation-button
+.cotation-button {
+  button {
+    width: 100%;
+    border: none;
+    height: 4.5rem;
+    background: $light-blue;
+    cursor: pointer;
+    transition: all ease 0.2s;
+
+    font-size: 1.4rem;
+    font-family: "BMWTypeNext Pro, Bold", sans-serif;
+    color: $white;
+
+    &:hover {
+      background: $blue-darker;
+    }
+  }
+}
+
+// Cotation Form
+.cotation-form {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $white;
+  z-index: 99;
+  visibility: hidden;
+  transition: all ease 0.5s;
+
+  font-family: "BMWTypeNext Pro, Light", sans-serif;
+
+  form {
+    padding: 0 1.6rem 1.6rem;
+
+    button {
+      background-color: $light-blue;
+      cursor: pointer;
+      transition: all ease 0.2s;
+
+      &:hover {
+        background-color: $blue-darker;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 4.5rem;
+
+    font-size: 1.4rem;
+
+    background: $grey-darker;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.2s;
+
+    &:hover {
+      background: $grey;
+    }
+  }
+
+  .cotation-solicitate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3rem;
+    gap: 1rem;
+
+    font-size: 2.6rem;
+    font-family: "BMWTypeNext Pro, Light", sans-serif;
+
+    img {
+      width: 2rem;
+    }
+  }
+
+  // Form inputs
+  .input-line {
+    margin-bottom: 3rem;
+    font-size: 1.7rem;
+    position: relative;
+    transition: all ease 0.2s;
+
+    input:hover,
+    select:hover,
+    textarea:hover {
+      border-bottom: 0.2rem solid $light-grey2;
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label,
+    select:focus + label {
+      font-size: 0.8rem;
+      margin-top: -0.5rem;
+    }
+
+    textarea:focus + label,
+    textarea:not(:placeholder-shown) + label {
+      font-size: 0.8rem;
+      margin-top: -1.2rem;
+    }
+
+    select:focus {
+      background-image: url("../images/icons/svg/seta-para-cima.svg");
+    }
+
+    select:valid + label {
+      font-size: 0.8rem;
+      margin-top: -0.5rem;
+    }
+
+    label {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      transition: all ease 0.2s;
+    }
+
+    input,
+    select,
+    textarea {
+      height: 2rem;
+      width: 100%;
+      padding: 0;
+
+      border: none;
+      border-bottom: 0.1rem solid $light-grey2;
+
+      background: none;
+      outline: none;
+
+      &:focus {
+        border-bottom: 0.2rem solid $light-blue;
+      }
+    }
+
+    select {
+      appearance: none;
+      background-image: url("../images/icons/svg/seta-para-baixo.svg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 1.4rem;
+      transition: all ease 0.2s;
+      cursor: pointer;
+
+      option {
+        font-size: 1.2rem;
+        font-family: "BMWTypeNext Pro, Light", sans-serif;
+      }
+    }
+
+    textarea {
+      resize: none;
+      height: 2.9rem;
+    }
+  }
+
+  .input-line:nth-child(6) {
+    margin-bottom: 0;
+  }
+
+  .checkbox-line {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all ease 0.2s;
+
+    &:hover {
+      color: $light-blue;
+    }
+
+    input {
+      width: 1rem;
+      margin-top: 0.2rem;
+    }
+
+    label {
+      font-size: 1.2rem;
+
+      a {
+        font-size: 1.2rem;
+        font-family: "BMWTypeNext Pro, Bold", sans-serif;
+      }
+    }
+  }
+}
+
+.cotation-form.visible {
+  visibility: visible;
+}
+
+// Main Card Display
+.card-wrapper {
+  background-image: url("../images/imgs/banners/mobile-banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 43.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+
+  .card-navigation {
+    display: flex;
+    gap: 1rem;
+
+    .btn-navigation {
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-navigation.selected {
+      background-color: $light-blue;
+    }
+  }
+}
+
+.display-header {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+
+  h1 {
+    font-size: 2rem;
+    color: $grey-darker;
+    font-family: "BMWTypeNext Pro, Light", sans-serif;
+  }
+}
+
+// Cars Wrapper
+.cars-wrapper {
+  padding: 0rem 1.6rem 5.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: $white;
+
+  .card-car {
+    max-width: 32.8rem;
+
+    img {
+      transition: all ease 0.2s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .car-card-footer {
+    .car-name h2 {
+      font-size: 2rem;
+      font-family: "BMWTypeNext Pro, Light", sans-serif;
+    }
+
+    .button-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.6rem;
+      margin: 2rem 0;
+
+      button {
+        width: 15.6rem;
+        height: 3.5rem;
+        border: none;
+        cursor: pointer;
+        transition: all ease 0.2s;
+
+        font-size: 1.2rem;
+        font-family: "BMWTypeNext Pro, Bold", sans-serif;
+        background: $grey-intermediate;
+        color: $white;
+
+        &:hover {
+          background: $grey;
+        }
+      }
+
+      button:first-child {
+        background: $light-blue;
+
+        &:hover {
+          background: $blue-darker;
+        }
+      }
+    }
+
+    .share-options {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        font-size: 1.2rem;
+        font-family: "BMWTypeNext Pro, Light", sans-serif;
+        color: $grey-intermediate;
+      }
+
+      img {
+        width: 2.4rem;
+        opacity: 0.6;
+        margin-left: 1.6rem;
+        transition: all ease 0.2s;
+
+        &:hover {
+          background: $light-blue;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  padding: 3rem 1.6rem;
+  background-color: $light-grey;
+
+  font-family: "BMWTypeNext Pro, Light", sans-serif;
+  color: $grey-darker;
+
+  .about-us {
+    border-bottom: 0.1rem solid $light-grey2;
+    padding: 0 0 3rem;
+    text-align: center;
+
+    font-size: 1.6rem;
+  }
+
+  .company-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 0 0;
+    gap: 3rem;
+
+    font-size: 1.2rem;
+
+    .made-by {
+      display: flex;
+      align-items: center;
+      gap: 0.99rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// WhatsApp Button
+.whatsapp-button {
+  position: fixed;
+  top: 56.1rem;
+  left: 1.6rem;
+
+  button {
+    height: 6.3rem;
+    width: 6.3rem;
+    border-radius: 50%;
+    border: none;
+    padding: 1.3rem 1.3rem 1.4rem 1.4rem;
+    box-shadow: 0 1rem 2rem #1d1d1d;
+    cursor: pointer;
+    transition: all ease 0.2s;
+
+    background-color: $light-green;
+
+    &:hover {
+      background-color: $green-darker;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
